@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 720.678px;
+  width: 1240px;
+  height: 68px;
+  margin-top: 45px;
+  padding-bottom: 50px;
+  &__logo {
+    width: 210px;
+    height: 68px;
+  }
+  &__nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 57px;
+    width: 309px;
+
+  }
+  a {
+    font-weight: 500;
+    font-size: 24px;
+    color: $primary-color;
+    text-decoration: none;
+  }
+  & a.active {
+    text-decoration-line: underline;
+  }
+}

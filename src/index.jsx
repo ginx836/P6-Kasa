@@ -1,29 +1,43 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './style/index.scss'
-// import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
 import Rent from './pages/Rent'
 import ErrorPage from './pages/ErrorPage'
+import Header from './components/Header'
+
+const AppLayout = () => {
+  return (
+    <>
+      <Header />
+      <Outlet />
+    </>
+  )
+}
 
 const router = createBrowserRouter([
   {
-    path: '/',
-    element: <Home />,
-  },
-  {
-    path: '/about',
-    element: <About />,
-  },
-  {
-    path: '/rent',
-    element: <Rent />,
-  },
-  {
-    path: '*',
-    element: <ErrorPage />,
+    element: <AppLayout />,
+    children: [
+      {
+        path: '/',
+        element: <Home />,
+      },
+      {
+        path: '/about',
+        element: <About />,
+      },
+      {
+        path: '/rent',
+        element: <Rent />,
+      },
+      {
+        path: '*',
+        element: <ErrorPage />,
+      },
+    ],
   },
 ])
 
