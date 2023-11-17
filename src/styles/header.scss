@@ -1,12 +1,10 @@
 .header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 720.678px;
-  width: 1240px;
+  max-width: 1440px;
   height: 68px;
-  margin-top: 45px;
-  padding-bottom: 50px;
+  margin: 45px 100px 50px;
   &__logo {
     width: 210px;
     height: 68px;
@@ -16,7 +14,6 @@
     justify-content: flex-end;
     gap: 57px;
     width: 309px;
-
   }
   a {
     font-weight: 500;

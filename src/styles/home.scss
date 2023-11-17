@@ -1,0 +1,29 @@
+@import 'variables.scss';
+
+.home {
+  margin: 0 100px;
+  &__content {
+    height: 829px;
+    background: $secondary-color;
+    border-radius: 25px;
+    margin-bottom: 50px;
+  }
+}
+.banner {
+  position: relative;
+  background: rgba(0, 0, 0, 0.3) url(../assets/home.png) center;
+  height: 223px;
+  border-radius: 25px;
+  background-blend-mode: darken;
+  margin-bottom: 45px;
+  &__text {
+    position: absolute;
+    width: 705px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 48px;
+    font-weight: 500;
+  }
+}

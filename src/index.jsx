@@ -1,18 +1,20 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import './style/index.scss'
+import './styles/index.scss'
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
 import Rent from './pages/Rent'
 import ErrorPage from './pages/ErrorPage'
 import Header from './components/Header'
+import Footer from './components/Footer'
 
 const AppLayout = () => {
   return (
     <>
       <Header />
       <Outlet />
+      <Footer />
     </>
   )
 }

@@ -1,8 +1,14 @@
-function Home() {
-  return (
-    <div>
-      <h1>Homepage</h1>
-    </div>
+import Banner from '../components/banner'
+import '../styles/home.scss'
+
+
+const Home = () => {
+  return (  
+  <section className="home">
+  <Banner />
+  <div className="home__content">
+  </div>
+  </section>
   )
 }
 

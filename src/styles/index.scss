@@ -1,6 +1,9 @@
 @import 'reset.scss';
 @import 'variables.scss';
 @import 'header.scss';
+@import 'footer.scss';
+
+
 
 body {
   max-width: 1440px;
@@ -9,4 +12,3 @@ body {
   font-size: 18px;
   background-color: #fff;
 }
-
