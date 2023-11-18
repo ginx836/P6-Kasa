@@ -1,0 +1,22 @@
+.errorpage__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 139px;
+
+  & h1 {
+    font-size: 228px;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 139px;
+  }
+
+  & p {
+    font-size: 36px;
+  }
+
+  & a {
+    padding-bottom: 139px;
+  }
+}
