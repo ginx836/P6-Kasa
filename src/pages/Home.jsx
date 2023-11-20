@@ -1,14 +1,16 @@
 import Banner from '../components/banner'
+import Gallery from '../components/Gallery'
 import '../styles/home.scss'
 
 
 const Home = () => {
-  return (  
-  <section className="home">
+  return (
+  <>  
+  <div className="home">
   <Banner />
-  <div className="home__content">
+  <Gallery />
   </div>
-  </section>
+  </>
   )
 }
 

@@ -1,29 +1,37 @@
 @import 'variables.scss';
+@import 'card.scss';
 
 .home {
   margin: 0 100px;
-  &__content {
-    height: 829px;
+
+  & .banner {
+    position: relative;
+    background: rgba(0, 0, 0, 0.3) url(../assets/home.png) center;
+    height: 223px;
+    border-radius: 25px;
+    background-blend-mode: darken;
+    margin-bottom: 45px;
+
+    &__text {
+      position: absolute;
+      width: 705px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 48px;
+      font-weight: 500;
+    }
+  }
+
+  & .home__gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    row-gap: 50px;
+    column-gap: 60px;
+    margin-bottom: 50px;
     background: $secondary-color;
     border-radius: 25px;
-    margin-bottom: 50px;
-  }
-}
-.banner {
-  position: relative;
-  background: rgba(0, 0, 0, 0.3) url(../assets/home.png) center;
-  height: 223px;
-  border-radius: 25px;
-  background-blend-mode: darken;
-  margin-bottom: 45px;
-  &__text {
-    position: absolute;
-    width: 705px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    font-size: 48px;
-    font-weight: 500;
+    padding: 56px 50px 43px;
   }
 }

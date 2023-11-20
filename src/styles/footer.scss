@@ -1,20 +1,21 @@
 .footer {
   display: flex;
   height: 209px;
+  max-width: auto;
   justify-content: center;
   align-items: center;
+  background-color: $footer-background;
+  color: white;
+  overflow: hidden;
   &__container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 513px;
     height: 114px;
-    gap: 28px;
-    background-color: $footer-background;
-    color: white;
     font-size: 24px;
     padding: 66px 464px 29px 463px;
+    flex-shrink: 0;
   }
   &__logo {
     width: 122px;
