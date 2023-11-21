@@ -12,7 +12,8 @@ $desktop: 1024px;
 $desktop-large: 1440px;
 
 //Layout 
-$default-margin: 50px;
+$default-margin: 0 100px;
+$default-margin-bottom: 50px;
 $default-gap: 50px;
 
 @mixin flex-center {

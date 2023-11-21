@@ -3,14 +3,14 @@
 @import 'banner.scss';
 
 .home {
-  margin: 0 100px;
+  margin: $default-margin;
 
   .home__gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
     row-gap: $default-gap;
     column-gap: 60px;
-    margin-bottom: $default-margin;
+    margin-bottom: $default-margin-bottom;
     background: $secondary-color;
     border-radius: 25px;
     padding: 56px 50px 43px;
