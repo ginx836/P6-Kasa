@@ -1,8 +1,11 @@
+import React from 'react'
+import Banner from '../components/Banner'
+
 function About() {
   return (
-    <div>
-      <h1>A propos</h1>
-    </div>
+    <section className="about">
+      <Banner />
+    </section>
   )
 }
 
