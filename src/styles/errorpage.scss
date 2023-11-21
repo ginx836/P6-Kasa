@@ -1,3 +1,5 @@
+@import 'variables';
+
 .errorpage__container {
   display: flex;
   flex-direction: column;
@@ -14,9 +16,28 @@
 
   & p {
     font-size: 36px;
+    text-align: center;
   }
 
   & a {
     padding-bottom: 139px;
+  }
+
+  @media (max-width: $mobile) {
+    gap: 113px;
+
+    & h1 {
+      font-size: 96px;
+    }
+
+    & p {
+      font-size: 18px;
+      width: 260px;
+    }
+
+    & a {
+      padding-bottom: 113px;
+      font-size: 14px;
+    }
   }
 }

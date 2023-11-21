@@ -4,15 +4,30 @@ import Logo from '../assets/logo.svg'
 
 const Header = () => {
   return (
-    <div className='header'>
-      <img className="header__logo" src={Logo} alt="logo" />
-      <nav className='header__nav'>
-        <NavLink to="/" className={({isActive, isPending}) => isPending ? "pending" : isActive ? "active" : ""}>Accueil</NavLink>
-        <NavLink to="/about" className={({isActive, isPending}) => isPending ? "pending" : isActive ? "active" : ""}>A Propos</NavLink>
+    <header className="header">
+      <h1>
+        <img className="header__logo" src={Logo} alt="Kasa" />
+      </h1>
+      <nav className="header__nav">
+        <NavLink
+          to="/"
+          className={({ isActive, isPending }) =>
+            isPending ? 'pending' : isActive ? 'active' : ''
+          }
+        >
+          Accueil
+        </NavLink>
+        <NavLink
+          to="/about"
+          className={({ isActive, isPending }) =>
+            isPending ? 'pending' : isActive ? 'active' : ''
+          }
+        >
+          A Propos
+        </NavLink>
       </nav>
-    </div>
+    </header>
   )
 }
-
 
 export default Header

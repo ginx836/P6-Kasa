@@ -5,7 +5,7 @@ import Card from '../components/Card'
 
 const Gallery = () => {
   return (
-    <div className="home__gallery">
+    <section className="home__gallery">
       {logements.map((logement) => {
         return (
           <article key={logement.id}>
@@ -15,7 +15,7 @@ const Gallery = () => {
           </article>
         )
       })}
-    </div>
+    </section>
   )
 }
 

@@ -1,4 +1,4 @@
-import Banner from '../components/banner'
+import Banner from '../components/Banner'
 import Gallery from '../components/Gallery'
 import '../styles/home.scss'
 
@@ -6,10 +6,10 @@ import '../styles/home.scss'
 const Home = () => {
   return (
   <>  
-  <div className="home">
+  <main className="home">
   <Banner />
   <Gallery />
-  </div>
+  </main>
   </>
   )
 }
