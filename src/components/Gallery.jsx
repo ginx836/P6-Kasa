@@ -6,15 +6,15 @@ import Card from '../components/Card'
 const Gallery = () => {
   return (
     <section className="home__gallery">
-      {logements.map((logement) => {
-        return (
+      {logements.map((logement) => 
+         (
           <article key={logement.id}>
             <Link to={`/logement/${logement.id}`}>
               <Card image={logement.cover} title={logement.title}/>
             </Link>
           </article>
         )
-      })}
+      )}
     </section>
   )
 }
