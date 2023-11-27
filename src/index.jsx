@@ -5,7 +5,8 @@ import './styles/variables.scss'
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
-import Rent from './pages/Rent'
+// import Rent from './pages/Rent'
+import ActiveRent from './pages/Rent'
 import ErrorPage from './pages/ErrorPage'
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -33,8 +34,8 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
-        path: '/rent',
-        element: <Rent />,
+        path: '/rent/:id',
+        element: <ActiveRent />,
       },
       {
         path: '*',
