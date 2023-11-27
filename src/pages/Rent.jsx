@@ -1,14 +1,15 @@
 import React from 'react'
 import { useParams, Navigate } from 'react-router-dom'
 import Carousel from '../components/Carousel'
-import logements from '../data/logements.json'
+import { useGallery } from '../components/GalleryContext'
 import '../styles/rent.scss'
 
 const ActiveRent = () => {
   //Récupère l'id du logement dans l'url
-  const id = useParams()
+  const { id } = useParams()
+  const { logements } = useGallery()
   //Récupère le logement correspondant à l'id
-  const logement = logements.find((logement) => logement.id === id.id)
+  const logement = logements.find((logement) => logement.id.toString() === id)
 
   return (
     <>

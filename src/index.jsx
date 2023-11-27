@@ -5,8 +5,8 @@ import './styles/variables.scss'
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
-// import Rent from './pages/Rent'
 import ActiveRent from './pages/Rent'
+import { GalleryProvider } from './components/GalleryContext'
 import ErrorPage from './pages/ErrorPage'
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -15,7 +15,9 @@ const AppLayout = () => {
   return (
     <>
       <Header />
+      <GalleryProvider>
       <Outlet />
+      </GalleryProvider>
       <Footer />
     </>
   )
@@ -26,7 +28,7 @@ const router = createBrowserRouter([
     element: <AppLayout />,
     children: [
       {
-        path: '/',
+        index: true,
         element: <Home />,
       },
       {
@@ -34,7 +36,7 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
-        path: '/rent/:id',
+        path: 'rent/:id',
         element: <ActiveRent />,
       },
       {
