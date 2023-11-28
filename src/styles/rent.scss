@@ -1,5 +1,76 @@
 @import 'variables.scss';
 
 .active-rent {
-  margin: $default-margin
+  margin: $default-margin;
+}
+
+.active-rent__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.active-rent__name {
+  font-weight: 500;
+
+  & h2 {
+    font-size: 38px;
+  }
+}
+
+.active-rent__host {
+  display: flex;
+  align-items: center;
+
+  & p {
+    width: 93px;
+    text-align: right;
+    padding-right: 10px;
+  }
+
+  & img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+}
+.active-rent__ranking {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+
+  .active-rent__tags {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+
+    & .btn {
+      @include flex-center;
+      width: auto;
+      height: 25px;
+      border-radius: 10px;
+      background: #ff6060;
+      color: $color-white;
+      margin-right: 10px;
+      font-size: 14px;
+      padding: 0 30px;
+    }
+  }
+}
+
+.active-rent__description {
+  display: flex;
+  gap: 76px;
+  margin-bottom: $default-margin-bottom;
+  
+  & .container {
+    width: 50%;
+    list-style-type: none;
+  }
 }

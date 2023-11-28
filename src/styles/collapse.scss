@@ -1,14 +1,10 @@
 @import 'variables.scss';
 
-.container {
-  margin-bottom: 20px;
-
-  & .container__content {
-    background-color: $secondary-color;
-    padding: 20px;
-    border-radius: 5px;
-    line-height: 1.5;
-  }
+.container__content {
+  background-color: $secondary-color;
+  padding: 20px;
+  border-radius: 5px;
+  line-height: 1.5;
 }
 
 .collapse__bar {
@@ -24,7 +20,6 @@
     font-size: 24px;
     font-weight: 500;
   }
-
 
   & button {
     background: $primary-color;

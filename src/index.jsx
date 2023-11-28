@@ -1,23 +1,23 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import './styles/index.scss'
-import './styles/variables.scss'
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom'
+import { RentProvider } from './components/RentContext'
 import Home from './pages/Home'
 import About from './pages/About'
 import ActiveRent from './pages/Rent'
-import { GalleryProvider } from './components/GalleryContext'
 import ErrorPage from './pages/ErrorPage'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import './styles/index.scss'
+import './styles/variables.scss'
 
 const AppLayout = () => {
   return (
     <>
       <Header />
-      <GalleryProvider>
-      <Outlet />
-      </GalleryProvider>
+      <RentProvider>
+        <Outlet />
+      </RentProvider>
       <Footer />
     </>
   )
