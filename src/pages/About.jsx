@@ -4,7 +4,12 @@ import Collapse from '../components/Collapse'
 import imageBanner from '../assets/about.png'
 import '../styles/pages/about.scss'
 
-function About() {
+/**
+ * @returns {JSX.Element} page à propos
+ * @imageBanner {string} image de la bannière
+ */
+
+const About = () => {
   return (
     <section className="about">
       <Banner imageBanner={imageBanner} />

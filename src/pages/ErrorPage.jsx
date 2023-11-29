@@ -1,8 +1,11 @@
 import {Link} from 'react-router-dom';
 import '../styles/pages/errorpage.scss';
 
+/**
+ * @returns {JSX.Element} page d'erreur 404
+ */
 
-function ErrorPage() {
+const ErrorPage = () => {
   return (
     <div className='errorpage__container'>
       <h1>404</h1>

@@ -4,19 +4,22 @@ import { useRentData } from '../components/RentContext'
 import Carousel from '../components/Carousel'
 import Rating from '../components/Rating'
 import Collapse from '../components/Collapse'
-
 import '../styles/pages/rent.scss'
 import '../styles/components/carousel.scss'
 
+/**
+ * Composant ActiveRent qui affiche les détails d'un logement spécifique
+ * @returns {JSX.Element} Le composant ActiveRent
+ */
 const ActiveRent = () => {
-  //Récupère l'id du logement dans l'url
+  // Récupère l'id du logement dans l'url
   const { id } = useParams()
   const { logements } = useRentData()
 
-  //Récupère le logement correspondant à l'id
+  // Récupère le logement correspondant à l'id
   const logement = logements.find((logement) => logement.id === id)
 
-  //Récupère les équipements du logement et les affiche sous forme de liste
+  // Récupère les équipements du logement et les affiche sous forme de liste
   const equipments = logement?.equipments.map((equipment, index) => {
     return <li key={index}>{equipment}</li>
   })

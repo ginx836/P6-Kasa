@@ -1,11 +1,23 @@
 import React, { createContext, useContext, useState, useEffect } from 'react'
 
+/**
+ * Crée un nouveau contexte pour les logements
+ */
 const RentContext = createContext()
 
-
+/**
+ * Fournit les logements et une fonction pour les mettre à jour à tous les composants enfants
+ */
 export const RentProvider = ({ children }) => {
+  /**
+   * État pour stocker les logements
+   */
   const [logements, setLogements] = useState([])
 
+  /**
+   * Met à jour les logements
+   * @param {Array} data - Les nouvelles données de logements
+   */
   const updateLogements = (data) => {
     setLogements(data)
   }
@@ -17,10 +29,16 @@ export const RentProvider = ({ children }) => {
   )
 }
 
-
+/**
+ * Utilise les données de logements du contexte
+ * @returns {Object} Les logements
+ */
 export const useRentData = () => {
   const { logements, updateLogements } = useContext(RentContext)
 
+  /**
+   * Récupère les données de logements à partir du fichier JSON à chaque fois que les logements sont mis à jour
+   */
   useEffect(() => {
     fetch('/logements.json').then((response) => {
       response.json().then((data) => {

@@ -1,6 +1,10 @@
 import React from 'react'
 import DarkLogo from '../assets/dark-logo.svg'
 
+/**
+ * Composant Footer qui affiche un pied de page avec un logo et un texte de copyright
+ * @returns {JSX.Element} Le composant Footer
+ */
 const Footer = () => {
   return (
     <footer className="footer">
