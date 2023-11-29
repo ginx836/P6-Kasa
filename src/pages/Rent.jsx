@@ -5,8 +5,8 @@ import Carousel from '../components/Carousel'
 import Rating from '../components/Rating'
 import Collapse from '../components/Collapse'
 
-import '../styles/rent.scss'
-import '../styles/carousel.scss'
+import '../styles/pages/rent.scss'
+import '../styles/components/carousel.scss'
 
 const ActiveRent = () => {
   //Récupère l'id du logement dans l'url

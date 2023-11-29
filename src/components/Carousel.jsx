@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import '../styles/carousel.scss'
 import ControlButtons from './ControlButtons'
+import '../styles/components/carousel.scss'
 
 const Carousel = ({ images }) => {
 

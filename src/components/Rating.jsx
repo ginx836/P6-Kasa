@@ -1,7 +1,7 @@
 import React from 'react'
 import fullstar from '../assets/star-full.svg'
 import emptystar from '../assets/star-empty.svg'
-import '../styles/rating.scss'
+import '../styles/components/rating.scss'
 
 const Rating = ({ score }) => {
   const stars = [1, 2, 3, 4, 5]

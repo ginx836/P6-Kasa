@@ -2,7 +2,7 @@ import React from 'react'
 import Banner from '../components/Banner'
 import Collapse from '../components/Collapse'
 import imageBanner from '../assets/about.png'
-import '../styles/about.scss'
+import '../styles/pages/about.scss'
 
 function About() {
   return (

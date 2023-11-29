@@ -9,7 +9,7 @@ import ErrorPage from './pages/ErrorPage'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import './styles/index.scss'
-import './styles/variables.scss'
+import './styles/utils/variables.scss'
 
 const AppLayout = () => {
   return (

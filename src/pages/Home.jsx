@@ -1,7 +1,7 @@
 import Banner from '../components/Banner'
 import Gallery from '../components/Gallery'
-import '../styles/home.scss'
 import imageBanner from '../assets/home.png'
+import '../styles/pages/home.scss'
 
 
 const Home = () => {
