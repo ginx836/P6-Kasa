@@ -11,7 +11,7 @@ import '../styles/pages/about.scss'
 
 const About = () => {
   return (
-    <section className="about">
+    <main className="about">
       <Banner imageBanner={imageBanner} />
       <div className="about__content">
         <Collapse label="Fiabilité">
@@ -43,7 +43,7 @@ const About = () => {
         </p>
         </Collapse>
       </div>
-    </section>
+    </main>
   )
 }
 

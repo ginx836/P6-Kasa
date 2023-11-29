@@ -7,6 +7,9 @@ $color-white: #fff;
 $color-black: #000;
 
 
+//Fonts
+$font-size-mobile: 13px;
+
 //Breakpoints
 $sml-mobile: 375px;
 $mobile: 425px;
@@ -16,6 +19,7 @@ $desktop-large: 1440px;
 
 //Layout 
 $default-margin: 0 100px;
+$default-mobile-margin: 0 20px;
 $default-margin-bottom: 50px;
 $default-gap: 50px;
 

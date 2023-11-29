@@ -1,41 +1,53 @@
 @import '../utils/variables.scss';
 
-.container__content {
-  background-color: $secondary-color;
-  padding: 20px;
-  border-radius: 5px;
-  line-height: 1.5;
-}
+.container {
+  & .collapse__bar {
+    @include flex-space-between;
+    border-radius: 5px;
+    background-color: $primary-color;
+    color: $color-white;
+    padding: 10px 15px;
 
-.collapse__bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-radius: 5px;
-  background-color: $primary-color;
-  color: $color-white;
-  padding: 10px 15px;
+    & h2 {
+      font-size: 24px;
+      font-weight: 500;
+    }
 
-  & h2 {
-    font-size: 24px;
-    font-weight: 500;
+    & button {
+      background: $primary-color;
+      border: none;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      padding: 0;
+      transition: all 0.3s ease-in-out;
+
+      & img {
+        @include full-size;
+
+        &.rotate {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+  .container__content {
+    padding: 20px;
+    background-color: $secondary-color;
+    border-radius: 5px;
+    line-height: 1.5;
   }
 
-  & button {
-    background: $primary-color;
-    border: none;
-    width: 32px;
-    height: 32px;
-    cursor: pointer;
-    padding: 0;
-    transition: all 0.3s ease-in-out;
+  @media screen and (max-width: $mobile) {
+    .collapse__bar {
+      padding: 10px;
 
-    & img {
-      @include full-size;
-
-      &.rotate {
-        transform: rotate(180deg);
+      & h2 {
+        font-size: $font-size-mobile;
       }
+    }
+    .container__content {
+      font-size: $font-size-mobile;
     }
   }
 }

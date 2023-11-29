@@ -27,16 +27,16 @@ const ActiveRent = () => {
   return (
     <>
       {logement && (
-        <div className="active-rent">
+        <main className="active-rent">
           <div className="active-rent__carousel">
             <Carousel images={logement.pictures} />
           </div>
 
           <div className="active-rent__title">
-            <div className="active-rent__name">
+            <section className="active-rent__name">
               <h2>{logement.title}</h2>
               <p>{logement.location}</p>
-            </div>
+            </section>
             <div className="active-rent__host">
               <p>{logement.host.name}</p>
               <img src={logement.host.picture} alt={logement.host.name} />
@@ -47,7 +47,7 @@ const ActiveRent = () => {
             <div className="active-rent__tags">
               {logement.tags.map((tag, index) => {
                 return (
-                  <div key={index} className="btn">
+                  <div key={index} className="tags__btn">
                     {tag}
                   </div>
                 )
@@ -56,10 +56,18 @@ const ActiveRent = () => {
             <Rating score={logement.rating} />
           </div>
           <div className="active-rent__description">
-            <Collapse label="Description" children={logement.description} />
-            <Collapse label="Équipements" children={equipments} />
+            <Collapse
+              key={`${id}-description`}
+              label="Description"
+              children={logement.description}
+            />
+            <Collapse
+              key={`${id}-equipments`}
+              label="Équipements"
+              children={equipments}
+            />
           </div>
-        </div>
+        </main>
       )}
     </>
   )

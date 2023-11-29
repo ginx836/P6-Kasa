@@ -41,7 +41,7 @@ const Collapse = (props) => {
         </button>
       </div>
       <div>
-        {isOpen && <p className="container__content">{props.children}</p>}
+        {isOpen && <div className="container__content">{props.children}</div>}
       </div>
     </div>
   )
