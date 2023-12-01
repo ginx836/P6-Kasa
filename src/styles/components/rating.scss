@@ -1,11 +1,21 @@
+@import '../utils/variables.scss';
+
 .active-rent__rating {
   display: flex;
   align-items: center;
-  margin-bottom: 31px;
+  gap: 15px;
 
   & img {
     width: 36px;
     height: 36px;
-    margin-right: 15px;
+  }
+
+  @media screen and (max-width: $mobile) {
+    gap: 10px;
+
+    & img {
+      width: 18px;
+      height: 18px;
+    }
   }
 }

@@ -31,19 +31,12 @@ const ActiveRent = () => {
           <div className="active-rent__carousel">
             <Carousel images={logement.pictures} />
           </div>
-
+          <div className='active-rent__container'>
           <div className="active-rent__title">
             <section className="active-rent__name">
               <h2>{logement.title}</h2>
               <p>{logement.location}</p>
             </section>
-            <div className="active-rent__host">
-              <p>{logement.host.name}</p>
-              <img src={logement.host.picture} alt={logement.host.name} />
-            </div>
-          </div>
-
-          <div className="active-rent__ranking">
             <div className="active-rent__tags">
               {logement.tags.map((tag, index) => {
                 return (
@@ -53,7 +46,14 @@ const ActiveRent = () => {
                 )
               })}
             </div>
+          </div>
+          <div className="active-rent__ranking">
+            <div className="active-rent__host">
+              <p>{logement.host.name}</p>
+              <img src={logement.host.picture} alt={logement.host.name} />
+            </div>
             <Rating score={logement.rating} />
+          </div>
           </div>
           <div className="active-rent__description">
             <Collapse

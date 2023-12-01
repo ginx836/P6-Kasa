@@ -16,16 +16,10 @@ const Collapse = (props) => {
   const [isOpen, setIsOpen] = useState(false)
 
   /**
-   * État pour contrôler si l'icône de la flèche est tournée ou non
-   */
-  const [isRotated, setIsRotated] = useState(false)
-
-  /**
-   * Bascule l'affichage du contenu et la rotation de l'icône de la flèche
+   * Bascule l'affichage du contenu du collapse
    */
   const toggle = () => {
     setIsOpen(!isOpen)
-    setIsRotated(!isRotated)
   }
 
   return (
@@ -36,7 +30,7 @@ const Collapse = (props) => {
           <img
             src={arrow}
             alt="bouton d'ouverture"
-            className={isRotated ? 'rotate' : ''}
+            className={isOpen ? 'rotate' : ''}
           />
         </button>
       </div>

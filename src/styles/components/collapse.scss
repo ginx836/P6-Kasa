@@ -7,8 +7,9 @@
     background-color: $primary-color;
     color: $color-white;
     padding: 10px 15px;
+    height: auto;
 
-    & h2 {
+    & .title {
       font-size: 24px;
       font-weight: 500;
     }
@@ -20,7 +21,6 @@
       height: 32px;
       cursor: pointer;
       padding: 0;
-      transition: all 0.3s ease-in-out;
 
       & img {
         @include full-size;
@@ -31,6 +31,7 @@
       }
     }
   }
+
   .container__content {
     padding: 20px;
     background-color: $secondary-color;
@@ -42,8 +43,13 @@
     .collapse__bar {
       padding: 10px;
 
-      & h2 {
+      & .title {
         font-size: $font-size-mobile;
+      }
+
+      & button {
+        width: 16px;
+        height: 16px;
       }
     }
     .container__content {
