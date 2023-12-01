@@ -2,41 +2,28 @@ import React, { useState } from 'react'
 import arrow from '../assets/ arrow.svg'
 import '../styles/components/collapse.scss'
 
-/**
- * Composant Collapse qui affiche ou cache du contenu lorsqu'on clique sur un bouton
- * @param {Object} props - Les propriétés passées au composant
- * @param {string} props.label - Le titre à afficher sur la barre de collapse
- * @param {JSX.Element} props.children - Le contenu à afficher ou à cacher
- * @returns {JSX.Element} Le composant Collapse
- */
-const Collapse = (props) => {
-  /**
-   * État pour contrôler si le contenu est affiché ou non
-   */
+const Collapse = ({ label, children }) => {
   const [isOpen, setIsOpen] = useState(false)
 
-  /**
-   * Bascule l'affichage du contenu du collapse
-   */
-  const toggle = () => {
-    setIsOpen(!isOpen)
-  }
+  const toggleOpen = () => setIsOpen(!isOpen)
 
   return (
     <div className="container">
       <div className="collapse__bar">
-        <h2 className="title">{props.label}</h2>
-        <button onClick={toggle}>
-          <img
-            src={arrow}
-            alt="bouton d'ouverture"
-            className={isOpen ? 'rotate' : ''}
-          />
-        </button>
+        <h2 className="title">{label}</h2>
+        <img
+          className="chevron"
+          src={arrow}
+          alt="bouton d'ouverture"
+          onClick={toggleOpen}
+          style={{ transform: isOpen ? 'rotate(180deg)' : 'none' }}
+        />
       </div>
-      <div>
-        {isOpen && <div className="container__content">{props.children}</div>}
+      <div className={`container__content ${isOpen ? 'open' : ''}`}>
+        <div className='content__inner'>
+        {children}
       </div>
+    </div>
     </div>
   )
 }

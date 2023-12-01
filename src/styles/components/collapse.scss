@@ -14,29 +14,30 @@
       font-weight: 500;
     }
 
-    & button {
-      background: $primary-color;
-      border: none;
+    & .chevron {
       width: 32px;
       height: 32px;
       cursor: pointer;
-      padding: 0;
-
-      & img {
-        @include full-size;
-
-        &.rotate {
-          transform: rotate(180deg);
-        }
-      }
+      transition-duration: 0.8s;
     }
   }
 
   .container__content {
-    padding: 20px;
     background-color: $secondary-color;
     border-radius: 5px;
     line-height: 1.5;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.8s ease-out;
+
+    & .content__inner {
+      padding: 20px;
+    }
+  }
+
+  .container__content.open {
+    max-height: 400px;
+    transition: max-height 0.8s ease-in;
   }
 
   @media screen and (max-width: $mobile) {
@@ -47,7 +48,7 @@
         font-size: $font-size-mobile;
       }
 
-      & button {
+      & .chevron {
         width: 16px;
         height: 16px;
       }
