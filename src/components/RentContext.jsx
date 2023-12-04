@@ -1,10 +1,4 @@
-import React, {
-  createContext,
-  useContext,
-  useState,
-  useEffect,
-  useCallback,
-} from 'react'
+import React, { createContext, useContext, useState, useEffect, useCallback} from 'react'
 
 /**
  * Crée un nouveau contexte pour les logements
@@ -50,25 +44,11 @@ export const useRentData = () => {
    * Récupère les données de logements à partir du fichier JSON à chaque fois que les logements sont mis à jour
    */
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(rentAPI)
-
-        if (!response.ok) {
-          throw new Error('Une erreur réseau est survenue')
-        }
-
-        const data = await response.json()
+    fetch(rentAPI).then((response) => {
+      response.json().then((data) => {
         updateLogements(data)
-      } catch (error) {
-        console.error(
-          'Erreur pendant la récupération des données:',
-          error.message,
-        )
-      }
-    }
-
-    fetchData()
+      })
+    })
   }, [logements, updateLogements])
 
   return { logements }
