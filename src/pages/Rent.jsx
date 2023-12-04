@@ -4,6 +4,7 @@ import { useRentData } from '../components/RentContext'
 import Carousel from '../components/Carousel'
 import Rating from '../components/Rating'
 import Collapse from '../components/Collapse'
+import ErrorPage from './ErrorPage'
 import '../styles/pages/rent.scss'
 import '../styles/components/carousel.scss'
 
@@ -18,6 +19,9 @@ const ActiveRent = () => {
 
   // Récupère le logement correspondant à l'id
   const logement = logements.find((logement) => logement.id === id)
+  // if (!logement) {<div>Logement introuvable</div>
+  //   return <ErrorPage />
+  // }
 
   // Récupère les équipements du logement et les affiche sous forme de liste
   const equipments = logement?.equipments.map((equipment, index) => {
@@ -26,7 +30,7 @@ const ActiveRent = () => {
 
   return (
     <>
-      {logement && (
+      {logement ? (
         <main className="active-rent">
           <div className="active-rent__carousel">
             <Carousel images={logement.pictures} />
@@ -68,6 +72,8 @@ const ActiveRent = () => {
             />
           </div>
         </main>
+      ) : (
+        <ErrorPage />
       )}
     </>
   )

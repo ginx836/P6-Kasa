@@ -9,9 +9,10 @@ import Logo from '../assets/logo.svg'
 const Header = () => {
   return (
     <header className="header">
-      <h1>
+      <div>
         <img className="header__logo" src={Logo} alt="Kasa" />
-      </h1>
+        <h1 className='visually-hidden'>Kasa</h1>
+      </div>
       <nav className="header__nav">
         <NavLink
           to="/"
