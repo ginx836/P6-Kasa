@@ -4,7 +4,7 @@ import React from 'react'
  * Composant Banner qui affiche une bannière avec une image et un titre
  * @param {Object} props - Les propriétés passées au composant
  * @param {string} props.title - Le titre à afficher sur la bannière
- * @param {string} props.imageBanner - L'image à afficher en arrière-plan de la bannière
+ * @param {string} props.imageBanner - L'image à afficher en arrière-plan 
  * @returns {JSX.Element} Le composant Banner
  */
 const Banner = ({ title, imageBanner }) => {
