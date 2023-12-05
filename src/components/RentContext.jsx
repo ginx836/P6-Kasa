@@ -1,10 +1,4 @@
-import React, {
-  createContext,
-  useContext,
-  useState,
-  useEffect,
-  useRef,
-} from 'react'
+import React, { createContext, useContext, useState, useEffect, useCallback} from 'react'
 
 /**
  * Crée un nouveau contexte pour les logements
@@ -25,15 +19,12 @@ export const RentProvider = ({ children }) => {
    * @param {Array} data - Les nouvelles données de logements
    * useCallback permet de ne pas recréer la fonction à chaque fois que le composant est rechargé
    */
-  //  const updateLogements = useCallback((data) => {
-  //    setLogements(data)
-  //    console.log(logement
-  //   }, [])
-
-  const isRentLoaded = useRef(false)
+  const updateLogements = useCallback((data) => {
+    setLogements(data)
+  }, [])
 
   return (
-    <RentContext.Provider value={{ logements, setLogements, isRentLoaded }}>
+    <RentContext.Provider value={{ logements, updateLogements }}>
       {children}
     </RentContext.Provider>
   )
@@ -46,22 +37,19 @@ export const RentProvider = ({ children }) => {
  * useEffect permet d'exécuter une fonction à chaque fois que les logements sont mis à jour
  */
 export const useRentData = () => {
-  const { logements, isRentLoaded, setLogements } = useContext(RentContext)
+  const { logements, updateLogements } = useContext(RentContext)
   const rentAPI = '/logements.json'
 
   /**
    * Récupère les données de logements à partir du fichier JSON à chaque fois que les logements sont mis à jour
    */
   useEffect(() => {
-    if (!isRentLoaded) {
-      fetch(rentAPI).then((response) => {
-        response.json().then((data) => {
-          setLogements(data)
-          isRentLoaded.current = true
-        })
+    fetch(rentAPI).then((response) => {
+      response.json().then((data) => {
+        updateLogements(data)
       })
-    }
-  }, [isRentLoaded, setLogements])
-  
+    })
+  }, [logements, updateLogements])
+
   return { logements }
 }
