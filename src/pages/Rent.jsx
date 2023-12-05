@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import { useFetchLogements } from '../components/useFetch'
+import { useRentData } from '../components/RentContext'
 import Carousel from '../components/Carousel'
 import Rating from '../components/Rating'
 import Collapse from '../components/Collapse'
@@ -15,8 +15,7 @@ import '../styles/components/carousel.scss'
 const ActiveRent = () => {
   // Récupère l'id du logement dans l'url
   const { id } = useParams()
-  // const { logements } = useRentData()
-  const logements = useFetchLogements('/logements.json')
+  const { logements } = useRentData()
 
   // Récupère le logement correspondant à l'id
   const logement = logements.find((logement) => logement.id === id)

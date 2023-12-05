@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Card from '../components/Card'
-import { useFetchLogements } from './useFetch'
+import { useRentData } from './RentContext'
 
 /**
  * Composant Gallery qui affiche une liste de logements
@@ -9,9 +9,9 @@ import { useFetchLogements } from './useFetch'
  */
 const Gallery = () => {
   /**
-   * Récupère les logements à partir du fichier JSON
+   * Récupère les logements du contexte
    */
-  const logements = useFetchLogements('/logements.json')
+  const { logements } = useRentData()
 
   return (
     <section className="home__gallery">
