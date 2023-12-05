@@ -19,9 +19,7 @@ const ActiveRent = () => {
 
   // Récupère le logement correspondant à l'id
   const logement = logements.find((logement) => logement.id === id)
-  // if (!logement) {<div>Logement introuvable</div>
-  //   return <ErrorPage />
-  // }
+ 
 
   // Récupère les équipements du logement et les affiche sous forme de liste
   const equipments = logement?.equipments.map((equipment, index) => {

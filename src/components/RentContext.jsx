@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect, useCallback} from 'react'
+import React, { createContext, useContext, useState, useEffect } from 'react'
 
 /**
  * Crée un nouveau contexte pour les logements
@@ -13,43 +13,23 @@ export const RentProvider = ({ children }) => {
    * État pour stocker les logements
    */
   const [logements, setLogements] = useState([])
+  const rentAPI = '/logements.json'
 
-  /**
-   * Met à jour les logements
-   * @param {Array} data - Les nouvelles données de logements
-   * useCallback permet de ne pas recréer la fonction à chaque fois que le composant est rechargé
-   */
-  const updateLogements = useCallback((data) => {
-    setLogements(data)
-  }, [])
+  useEffect(() => {
+    fetch(rentAPI).then((response) => {
+      response.json().then((data) => {
+        setLogements(data)
+      })
+    })
+  }, [setLogements])
 
   return (
-    <RentContext.Provider value={{ logements, updateLogements }}>
+    <RentContext.Provider value={{ logements, setLogements }}>
       {children}
     </RentContext.Provider>
   )
 }
 
-/**
- * Utilise les données de logements du contexte
- * @returns {Object} Les logements
- * useContext permet de récupérer les données du contexte
- * useEffect permet d'exécuter une fonction à chaque fois que les logements sont mis à jour
- */
 export const useRentData = () => {
-  const { logements, updateLogements } = useContext(RentContext)
-  const rentAPI = '/logements.json'
-
-  /**
-   * Récupère les données de logements à partir du fichier JSON à chaque fois que les logements sont mis à jour
-   */
-  useEffect(() => {
-    fetch(rentAPI).then((response) => {
-      response.json().then((data) => {
-        updateLogements(data)
-      })
-    })
-  }, [logements, updateLogements])
-
-  return { logements }
+   return useContext(RentContext)
 }
