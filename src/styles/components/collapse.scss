@@ -28,16 +28,16 @@
     line-height: 1.5;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.8s ease-in-out;
+    transition: max-height 0.5s ease-in-out;
 
     & .content__inner {
       padding: 20px;
     }
   }
 
+  // On définit une max-height volontairement supérieur à la hauteur de la div pour éviter les problèmes de transition
   .container__content.open {
     max-height: 1000px;
-    transition: max-height 0.8s ease-in;
   }
 
   @media screen and (max-width: $mobile) {
