@@ -1,10 +1,8 @@
 @import '../utils/variables.scss';
 
 .errorpage__container {
-  display: flex;
+  @include flex-center;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   gap: 139px;
 
   & h1 {
@@ -21,6 +19,7 @@
 
   & a {
     padding-bottom: 139px;
+    color: $primary-color;
   }
 
   @media (max-width: $mobile) {

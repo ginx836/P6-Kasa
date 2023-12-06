@@ -4,8 +4,7 @@
   margin: $default-margin;
 
   &__content {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     margin: 38px 108px;
     gap: 20px;
   }

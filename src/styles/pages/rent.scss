@@ -20,8 +20,7 @@
   }
 
   .active-rent__title {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     justify-content: space-between;
     line-height: 1.2;
 
@@ -57,12 +56,12 @@
     @include flex-center;
     width: auto;
     height: 25px;
-    border-radius: 10px;
-    background: #ff6060;
+    border-radius: $small-border-radius;
+    background: $primary-color;
     color: $color-white;
     margin-right: 10px;
     font-size: 14px;
-    padding: 0 30px;
+    padding: 0 22px;
   }
 
   @media screen and (max-width: $mobile) {
@@ -74,8 +73,7 @@
 }
 
 .active-rent__ranking {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
 
   @media screen and (max-width: $mobile) {
     flex-direction: row-reverse;

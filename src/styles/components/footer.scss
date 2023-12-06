@@ -4,7 +4,7 @@
   @include flex-center;
   height: 209px;
   background-color: $footer-background;
-  color: white;
+  color: $color-white;
   overflow: hidden;
 
   &__container {
@@ -24,7 +24,7 @@
 
 @media (max-width: $mobile) {
   .footer__container {
-    padding: 66px 120.313px 58px 121.094px;
+    padding: 66px 120px 58px 121px;
     font-size: 12px;
     justify-content: center;
     line-height: 2;

@@ -1,17 +1,15 @@
 @import '../utils/variables.scss';
 
 .active-rent__rating {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+  @include flex-center;
+  gap: 10px;
 
   & img {
-    width: 36px;
+    width: 24px;
     height: 36px;
   }
 
   @media screen and (max-width: $mobile) {
-    gap: 10px;
 
     & img {
       width: 18px;

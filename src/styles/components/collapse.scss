@@ -3,7 +3,7 @@
 .container {
   & .collapse__bar {
     @include flex-space-between;
-    border-radius: 5px;
+    border-radius: $collapse-border-radius;
     background-color: $primary-color;
     color: $color-white;
     padding: 10px 15px;
@@ -24,7 +24,7 @@
 
   .container__content {
     background-color: $secondary-color;
-    border-radius: 5px;
+    border-radius: $collapse-border-radius;
     line-height: 1.5;
     max-height: 0;
     overflow: hidden;
