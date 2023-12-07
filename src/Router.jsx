@@ -8,6 +8,7 @@ import ErrorPage from './pages/ErrorPage'
 
 const router = createBrowserRouter([
   {
+    path: '/',
     element: <App />,
     children: [
       {
@@ -23,7 +24,7 @@ const router = createBrowserRouter([
         element: <ActiveRent />,
       },
       {
-        path: '*',
+        path: '/404',
         element: <ErrorPage />,
       },
     ],
