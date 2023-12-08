@@ -30,7 +30,7 @@ const ActiveRent = () => {
       {logement ? (
         <main className="active-rent">
           <div className="active-rent__carousel">
-            <Carousel images={logement.pictures} />
+            <Carousel images={logement.pictures} alt={logement.title} />
           </div>
           <div className="active-rent__container">
             <div className="active-rent__title">

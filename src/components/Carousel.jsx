@@ -8,7 +8,7 @@ import '../styles/components/carousel.scss'
  * @param {Array} props.images - Les images à afficher
  * @returns {JSX.Element} Le composant Carousel
  */
-const Carousel = ({ images }) => {
+const Carousel = ({ images, alt }) => {
   /**
    * État pour contrôler l'image actuellement affichée
    */
@@ -37,7 +37,7 @@ const Carousel = ({ images }) => {
   return (
     <div className="slider">
       <div className={length > 1 ? 'slide active' : 'slide'}>
-        {currentPicture && <img src={currentPicture} alt="Logement" />}
+        {currentPicture && <img src={currentPicture} alt={alt} />}
       </div>
       {length > 1 && (
         <>
