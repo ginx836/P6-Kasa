@@ -12,20 +12,23 @@ L'objectif de ce projet :
 - Utilisation obligatoire de SASS pour la gestion des styles
 
 
-## Getting Started with Create React App
+## Scripts disponibles
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Dans le répertoire du projet, vous pouvez exécuter les commandes suivantes:
 
-## Available Scripts
+### `yarn install`
 
-In the project directory, you can run:
+Installe toutes les dépendances listées à l'intérieur du fichier package.json dnas le dossier local node_modules (créé automatiquement)
 
 ### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Lance l'application en mode développement.\
+Ouvrir [http://localhost:3000](http://localhost:3000) pour l'afficher dans le navigateur.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+La page se rechargera automatiquement si vous modifiez le code source.\
+Vous pourrez également voir les erreurs dans la console.
 
 
+## Divers
+
+Ce projet a été crée avec [Create React App](https://github.com/facebook/create-react-app).
