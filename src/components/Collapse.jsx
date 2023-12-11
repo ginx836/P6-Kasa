@@ -4,11 +4,10 @@ import '../styles/components/collapse.scss'
 
 /**
   *
+  * @param {Object} props - Les propriétés passées au composant
   * @param {string} label titre du collapse
   * @param {JSX.Element} children contenu du collapse
   * @returns {JSX.Element} collapse
-  * @description collapse
-  * @example
   * 
   * On définit une hauteur maximale pour le contenu du collapse, qui est égale à 0 si isOpen est false, et à la hauteur du contenu si isOpen est true.
   * useEffect permet de mettre à jour la hauteur réelle du contenu (scrollHeight) en fonction de isOpen.

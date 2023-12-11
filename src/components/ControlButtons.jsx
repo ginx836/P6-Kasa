@@ -3,9 +3,10 @@ import left from '../assets/Vector-left.svg'
 import right from '../assets/Vector-right.svg'
 
 /**
- * @returns {JSX.Element} boutons de contrôle
+ * @param {Object} props - Les propriétés passées au composant
  * @onPrev {function} Définit la page précédente
  * @onNext {function} Définit la page suivante
+ * @returns {JSX.Element} boutons de contrôle
  */
 
 const ControlButtons = ({ onPrev, onNext }) => (

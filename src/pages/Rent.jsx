@@ -4,7 +4,6 @@ import { useRentData } from '../components/RentContext'
 import Carousel from '../components/Carousel'
 import Rating from '../components/Rating'
 import Collapse from '../components/Collapse'
-// import ErrorPage from './ErrorPage'
 import '../styles/pages/rent.scss'
 import '../styles/components/carousel.scss'
 

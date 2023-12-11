@@ -6,6 +6,7 @@ import '../styles/components/carousel.scss'
  * Composant Carousel qui affiche une série d'images sous forme de diaporama
  * @param {Object} props - Les propriétés passées au composant
  * @param {Array} props.images - Les images à afficher
+ * @param {String} props.alt - Le texte alternatif pour les images
  * @returns {JSX.Element} Le composant Carousel
  */
 const Carousel = ({ images, alt }) => {
