@@ -11,6 +11,10 @@ L'objectif de ce projet :
 - Récupération de données depuis un fichier JSON (mise en place dans ce projet de la logique de récupération de données depuis une API)
 - Utilisation obligatoire de SASS pour la gestion des styles
 
+## Screenshots
+
+![Capture d'écran](public/Kasa-Cover.webp)
+
 
 ## Scripts disponibles
 
