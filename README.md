@@ -1,6 +1,6 @@
 # KASA - Application de location de logements
 
-Ce projet est une application de location de logements. 
+Ce projet est une application de location de logements.</br> 
 Il a été réalisé dans le cadre de la formation de développeur web chez OpenClassrooms.
 
 L'objectif de ce projet : 
